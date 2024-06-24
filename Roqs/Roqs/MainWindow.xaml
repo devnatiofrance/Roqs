@@ -6,11 +6,13 @@
         xmlns:local="clr-namespace:Roqs"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Closing="Window_Closing"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown" KeyUp="Window_KeyUp">
     <Grid>
-        <Canvas >
-            <Rectangle Fill="Red" Width="50" Height="75"></Rectangle>
+        <Canvas x:Name="canvas" >
+            <Rectangle x:Name="player" Fill="Red" Width="50" Height="100" Canvas.Left="374" Canvas.Top="60"></Rectangle>
+            <Rectangle x:Name="ground" Fill="Brown" Width="794" Height="33" Canvas.Top="387"></Rectangle>
         </Canvas>
+        <Label x:Name="labelDebug" Content="Debug" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
 
     </Grid>
 </Window>
